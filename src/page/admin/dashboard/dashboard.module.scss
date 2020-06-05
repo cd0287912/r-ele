@@ -1,0 +1,44 @@
+@import "./../../../style/varable.scss";
+.dashbosadard{
+  position: relative;
+}
+
+// header
+.top-headers{
+  padding: 24px;
+  background: #fff;
+  h3{
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+.top-headers-info{
+  display: flex;
+  .info-avatar-container{
+    width: 72px;
+    height: 72px;
+    border-radius: 72px;
+    img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .info-user{
+    flex: 1;
+    margin-left: 24px;
+    p{
+      color: $em_color;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+}
+
+// container
+.container{
+  padding: 24px;
+}

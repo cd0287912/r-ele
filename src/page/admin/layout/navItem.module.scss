@@ -1,0 +1,27 @@
+@import './../../../style/varable.scss';
+li.item{
+  line-height: 48px;
+  padding: 0 10px;
+  color: $main_color;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  i{
+    font-size: 20px;
+  }
+  .label{
+    color:inherit;
+    margin-left: 4px;
+    font-family: coco;
+  }
+}
+:global(li.active) {
+  background: $main_color;
+  color: #fff;
+}
+li.item:hover{
+  background: $main_color;
+  color: #fff;
+}
+

@@ -1,0 +1,20 @@
+#root{height: 100%}
+* {box-sizing: border-box}
+h1,ul{
+  padding: 0;
+  margin: 0;
+}
+ul{
+  list-style: none;
+}
+
+@font-face{
+  font-family: 'coco';
+  src: url('./../assets/font/coco.ttf');
+}
+
+
+i.iconfont{
+  font-size: 26px;
+  cursor: pointer;
+}

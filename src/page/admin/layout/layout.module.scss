@@ -1,0 +1,47 @@
+@import './../../../style/varable.scss';
+.layout{
+  display: flex;
+  height: 100%;
+}
+.nav{
+  width: 200px;
+  position: relative;
+  box-shadow: 1px 0 3px rgba(0,21,41,.1);
+  // box-shadow: 2px 0 6px rgba(0,21,41,.35);
+  z-index: 10;
+  .logo{
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    background: #fff;
+  }
+}
+.container {
+  flex: 1;
+  header{
+    height: 70px;
+    box-shadow: $show;
+    box-shadow: 0 1px 4px rgba(0,21,41,.08);
+    z-index: 9;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+    background: #fff;
+    i{
+      margin-left: 20px;
+    }
+    i:hover{
+      color: #ea4c89;
+      transition: all .1s linear;
+    }
+  }
+  main{
+    height: calc(100% - 70px);
+    background: #F2F6FC;
+    overflow: auto;
+  }
+}
+
+

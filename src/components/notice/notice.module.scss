@@ -1,0 +1,28 @@
+div.notice{
+  padding: 12px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  &.success{
+    background-color: #f0f9eb;
+    h2{color: #67c23a;}
+  }
+  &.error{
+    background-color: #ff5555;
+  }
+  &.info{
+    background-color: #e6f7ff;
+    h2{color: #909399;}
+  }
+}
+h2{
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #fff;
+}
+

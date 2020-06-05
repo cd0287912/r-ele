@@ -1,0 +1,119 @@
+@import './../../../style/varable.scss';
+@media screen and (max-width: 960px){
+  .logo{display: none;}
+}
+.login{
+  min-height: 100%;
+  position: relative;
+  display: flex;
+}
+.logo{
+  width: 514px;
+  height: 100vh;
+  background: #f1cdd7 url('./../../../assets/image/logo_banner.jpg') no-repeat;
+  background-position: bottom center;
+  background-size: 100%;
+  h1{
+    color: #865c6c;
+    font-family: coco;
+    font-weight: bolder;
+    padding: 80px 60px 0;
+  }
+}
+.container{
+  flex: 1;
+  position: relative;
+}
+.main{
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  transform: translate(-50%,-50%);
+  width: 400px;
+  border-radius: 4px;
+  padding:50px 30px 50px;
+}
+
+.icon{
+  text-align: center;
+  margin: 0 0 24px;
+  img{
+    width: 120px;
+  }
+}
+form{position: relative;}
+fieldset{
+  margin: 0 0 12px;
+}
+
+label{
+  display: block;
+  color: $em_color;
+  font-size: 16px;
+  margin: 14px 0 4px;
+  font-weight: bold;
+}
+.input {
+  width: 100%;
+  border: 1px solid transparent;
+  font-weight: 400;
+  line-height: 24px;
+  height: 40px;
+  padding: 10px 16px;
+  outline: none;
+  border-radius: 8px;
+  color: $em_color;
+  background-color: #f3f3f4;
+  transition: all .2s linear;
+}
+.input:hover{
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(234,76,137,0.1)
+}
+.input:focus{
+  box-shadow: 0 0 0 4px rgba(234,76,137,0.1)
+}
+
+.button{
+  min-width: 40%;
+  margin-top: 22px;
+  padding: 10px 16px;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  background: #ea4c89;
+  transition: all 200ms ease;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  outline: none;
+}
+.button:hover{
+  background: #f082ac
+}
+.button:active{
+  background: #bb3d6e;
+}
+.button + a{
+  color: #ea4c89;
+  font-size: 16px;
+  text-decoration: underline;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+
+.agreeBox{
+  position: relative;
+  padding-left: 20px;
+  input[type='checkbox']{
+    position: absolute;
+    left: 0;
+    top: 5px;
+  }
+  label{
+    margin: 0;
+  }
+}

@@ -1,0 +1,64 @@
+@import './../../style//varable.scss';
+.head{
+  width: 100%;
+  box-shadow: $show;
+  background: #fff;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.logo-container{
+  line-height: 80px;
+  img{
+    width: 60px;
+    vertical-align: middle;
+  }
+  h1{
+    display: inline-block;
+    vertical-align: middle;
+    font-family: coco;
+    font-weight: 800;
+    line-height: 1.5;
+    color: $em_color;
+  }
+}
+
+.nav{
+  text-align: right;
+  line-height: 80px;
+  li{
+    position: relative;
+    display: inline-block;
+    color: $main_color;
+    line-height: 2;
+    font-size: 16px;
+    margin-left: 40px;
+    cursor: pointer;
+  }
+  li::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: $em_color;
+  }
+  li:hover::after{
+    transition: all .1s linear;
+    width: 100%;
+  }
+  :global{
+    li.active::after{
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 576px){
+  .logo-container{
+    text-align: center;
+  }
+}

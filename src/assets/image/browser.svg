@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="428px" height="348px" viewBox="0 0 428 348" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 13</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="340" height="260" rx="14"></rect>
+        <filter x="-19.7%" y="-25.0%" width="139.4%" height="151.5%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="22" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.129076087 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-426.000000, -1924.000000)">
+            <g id="Inspiration" transform="translate(0.000000, 1526.000000)">
+                <g id="Group-12" transform="translate(0.000000, 360.000000)">
+                    <g id="Group-13" transform="translate(470.000000, 80.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Rectangle-12">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                            <use fill="#F7F7F7" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
+                        <rect id="Rectangle-16" fill="#E9E9E9" mask="url(#mask-2)" x="0" y="0" width="340" height="50"></rect>
+                        <rect id="Rectangle-17" fill="#FF5F58" mask="url(#mask-2)" x="16" y="16" width="18" height="18" rx="9"></rect>
+                        <rect id="Rectangle-17" fill="#FFC02E" mask="url(#mask-2)" x="44" y="16" width="18" height="18" rx="9"></rect>
+                        <rect id="Rectangle-17" fill="#29CA41" mask="url(#mask-2)" x="72" y="16" width="18" height="18" rx="9"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
