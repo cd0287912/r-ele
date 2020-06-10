@@ -1,11 +1,11 @@
-import React from "react"
+// import React from "react"
 import Auth from "./../components/auth"
 import login from "./../page/admin/login"
 import Layout from "./../page/admin/layout"
 import Aashboard from "./../page/admin/dashboard"
 import Person from "./../page/admin/person"
 import Pages from "./../page/admin/page"
-import { Redirect } from "react-router-dom"
+// import { Redirect } from "react-router-dom"
 const routes = [
   {
     path:'/admin/login',

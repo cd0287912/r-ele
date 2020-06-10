@@ -3,7 +3,7 @@ import styled from './page.module.scss'
 import Button from './../../../components/button'
 import Input from './../../../components/input'
 import Select from './../../../components/select'
-import { Table, Tag, Radio } from 'antd'
+import { Table, Tag } from 'antd'
 
 const list = [
   {
@@ -45,7 +45,7 @@ const columns = [
     title: 'Name',
     dataIndex: 'name',
     key: 'name',
-    render: (text) => <a>{text}</a>,
+    render: (text) => <a href>{text}</a>,
   },
   {
     title: 'Age',
@@ -82,8 +82,8 @@ const columns = [
     key: 'action',
     render: (text, record) => (
       <span>
-        <a style={{ marginRight: 16 }}>Invite {record.name}</a>
-        <a>Delete</a>
+        <a href style={{ marginRight: 16 }}>Invite {record.name}</a>
+        <a href>Delete</a>
       </span>
     ),
   },
