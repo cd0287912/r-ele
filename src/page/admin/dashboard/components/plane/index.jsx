@@ -1,6 +1,6 @@
 import React from 'react'
 import {Card} from "antd"
-import styled from "./plane.module.scss"
+// import styled from "./plane.module.scss"
 
 function Plane(){
   return (

@@ -1,0 +1,25 @@
+@import "./../../style/varable.scss";
+.input-wrap{
+  display: inline-block;
+  width: 100%;
+  input{
+    width: 100%;
+    border: 1px solid transparent;
+    font-weight: 400;
+    line-height: 24px;
+    height: 40px;
+    padding: 10px 16px;
+    outline: none;
+    border-radius: 8px;
+    color: $em_color;
+    background-color: #f3f3f4;
+    transition: all .2s linear;
+  }
+  input:hover{
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(234,76,137,0.1)
+  }
+  input:focus{
+    box-shadow: 0 0 0 4px rgba(234,76,137,0.1)
+  }
+}

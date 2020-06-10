@@ -1,17 +1,18 @@
 import React,{useState,useEffect,useRef} from "react"
 import { message } from 'antd';
-import {Redirect} from "react-router-dom"
-import {connect} from 'react-redux'
+import { Redirect } from "react-router-dom"
+import { connect } from 'react-redux'
 import styled from "./login.module.scss"
 import icon from "./../../../assets/image/panda.svg"
 import useNotice from "./../../../components/notice"
 import { encrypt } from "./../../../utlis"
 import { getStorage } from "./../../../utlis/store"
-import { actionCheckHasUser, actionLogin,actionRegister } from "./../../../store/module/user/action"
+import { checkUserIsExit, register} from "./../../../api/admin"
+import { actionLogin } from "./../../../store/module/user/action"
 
 function Login(props){
   
-  const { apiCheckHasUser,apiLogin,apiRegister,history } = props
+  const { apiLogin,history } = props
   const usernameRef = useRef();
   const passworldRef = useRef();
   const passworldAgainRef = useRef();
@@ -51,18 +52,6 @@ function Login(props){
         setTimeout(() => {
           history.replace('/admin/dashboard')
         },1000)
-        /**
-         * 不需要再次获取用户信息
-         */
-        // apiGetUserInfo().then(res => {
-        //   if(res){
-        //     // 获取用户信息成功
-        //     // 跳转
-        //     setTimeout(() => {
-        //       history.replace('/admin')
-        //     },1000)
-        //   }
-        // })
       }
       // 登录失败
       setNotice({
@@ -78,7 +67,7 @@ function Login(props){
     const passworldAgain = encrypt(passworldAgainRef.current.value.trim())
     if(username && passworld === passworldAgain && ischecked){
       const params = {userName:username, passWord:passworld}
-      apiRegister(params).then(res => {
+      register(params).then(res => {
         if(res.code === 0){
           setNotice({
             show:true,
@@ -102,7 +91,7 @@ function Login(props){
   const inputUserBlur = () => {
     const username = usernameRef.current.value.trim()
     if(!username) return;
-    apiCheckHasUser(username).then(res => {
+    checkUserIsExit({userName:username}).then(res => {
       if(res.code === -1 && signType === 'signIn'){
         setNotice({
           show:true,
@@ -177,9 +166,7 @@ function Login(props){
 }
 
 const mapDiapatchToProps = dispatch => ({
-  apiCheckHasUser:username => dispatch(actionCheckHasUser(username)),
-  apiLogin:payload => dispatch(actionLogin(payload)),
-  apiRegister:payload => dispatch(actionRegister(payload))
+  apiLogin:payload => dispatch(actionLogin(payload))
 })
 
 export default connect(null, mapDiapatchToProps)(Login)

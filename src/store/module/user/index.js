@@ -1,6 +1,10 @@
 import {SAVEUSERINFO} from "./action"
 const defaultState = {
-  userInfo:null
+  userInfo:{
+    avatar:'',
+    userName:'',
+    phone:''
+  }
 }
 
 

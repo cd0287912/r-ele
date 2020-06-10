@@ -1,0 +1,71 @@
+@import "./../../../style/varable.scss";
+
+.formItem{
+  margin-top: 30px;
+  width: 600px;
+}
+
+
+.avatar-container{
+  margin-top: 10px;
+  span{
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    border: 1px dashed #ccc;
+    .icon-wrap{
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+    i{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      font-size: 30px;
+     
+      color: #ccc;
+    }
+  }
+  span:hover{
+    .icon-wrap{display: block;}
+  }
+  img{
+    width: 100%;
+    height: 100%;
+  }
+  input[type='file']{
+    display: none;
+  }
+}
+
+// .username-container{
+//   input[type='text']{
+//     width: 200px;
+//     border: 1px solid transparent;
+//     font-weight: 400;
+//     line-height: 24px;
+//     height: 40px;
+//     padding: 10px 16px;
+//     outline: none;
+//     border-radius: 8px;
+//     color: $em_color;
+//     background-color: #f3f3f4;
+//     transition: all .2s linear;
+//   }
+//   input:hover{
+//     background-color: #fff;
+//     box-shadow: 0 0 0 4px rgba(234,76,137,0.1)
+//   }
+//   input:focus{
+//     box-shadow: 0 0 0 4px rgba(234,76,137,0.1)
+//   }
+// }

@@ -1,0 +1,38 @@
+@import "./../../../style/varable.scss";
+.person{
+  padding: 24px;
+  height: 100%;
+  overflow: auto;
+}
+
+.container{
+  background: #fff;
+  padding: 20px;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.navTabs{
+  position: relative;
+  ul li{
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    color: $main_color;
+  }
+
+  .navTabsLine{
+    position: absolute;
+    height: 2px;
+    width: 64px;
+    background: $main_color;
+    left: 0;
+    bottom: -4px;
+    transition: left .3s;
+  }
+}
+
+.main{
+  margin-top: 14px;
+}

@@ -2,7 +2,6 @@ import React from "react"
 import styled from './navItem.module.scss'
 import classNames from 'classnames'
 import {withRouter} from 'react-router-dom'
-import Icon from "./../../../icon"
 function NavItem(props){
   const {item, location, history} = props
   const path = location.pathname;

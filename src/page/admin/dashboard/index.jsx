@@ -1,10 +1,12 @@
 import React from 'react'
 import styled from "./dashboard.module.scss"
-import {Row,Col,Card} from "antd"
+import {Row,Col} from "antd"
 import Technology from "./components/technology"
 import Plane from "./components/plane"
 import Dynamic from "./components/dynamic"
-function Aashboard(){
+import {connect} from 'react-redux'
+const {baseURL} = require('./../../../config')
+function Aashboard({userInfo}){
   return (
     <div className={styled.dashbosadard}>
 
@@ -12,11 +14,11 @@ function Aashboard(){
         <h3>工作台</h3>
         <div className={styled["top-headers-info"]}>
           <div className={styled['info-avatar-container']}>
-            <img src="https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png" alt="" />
+            <img src={baseURL+userInfo.avatar} alt="" />
           </div>
           <div className={styled['info-user']}>
-            <p>早安，Serati Ma，祝你开心每一天！</p>
-            <span>交互专家 |蚂蚁金服－某某某事业群－某某平台部－某某技术部－UED</span>
+            <p>{userInfo.userName}，祝你开心每一天！</p>
+            <span>联系方式: {userInfo.phone ? userInfo.phone : '暂无'}</span>
           </div>
         </div>
       </div>
@@ -42,4 +44,8 @@ function Aashboard(){
     </div>
   )
 }
-export default Aashboard
+
+const mapStateToProps = state => ({
+  userInfo: state.user.userInfo
+})
+export default connect(mapStateToProps,null)(Aashboard)

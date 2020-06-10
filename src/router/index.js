@@ -8,7 +8,6 @@ const routes = [
   ...adminRouters,
   {
     path:'/',
-    exact: true,
     component: WebLayout,
     routes:[
       {

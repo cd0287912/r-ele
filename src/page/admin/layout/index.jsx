@@ -6,9 +6,10 @@ import { Avatar,Tooltip } from 'antd';
 import {renderRoutes} from 'react-router-config'
 import {removeStorage} from "./../../../utlis/store"
 import Nav from "./nav"
+const {baseURL} = require('./../../../config')
 
 function Layout(porps){
-  const {route} = porps
+  const {route,userInfo} = porps
   // 退出登录
   const handleExit = () => {
     removeStorage("TOKEN")
@@ -24,8 +25,9 @@ function Layout(porps){
       </div>
       <div className={styled.container}>
         <header>
-          <Avatar size={40} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-
+          {
+            userInfo.avatar ? (<Avatar size={40} src={baseURL + userInfo.avatar} />):null
+          }
           <Tooltip color={'#606266'} placement="topLeft" title='退出'>
             <i onClick={handleExit} className="iconfont icon-guanji"></i>
           </Tooltip>
@@ -42,10 +44,10 @@ function Layout(porps){
 
 
 const mapStateToProps =  state => ({
-
+  userInfo: state.user.userInfo
 })
 
 const mapDispatchToPorps = dispatch => ({
 })
 
-export default connect(mapStateToProps,mapDispatchToPorps)(Layout)
+export default connect(mapStateToProps, mapDispatchToPorps)(Layout)

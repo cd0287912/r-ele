@@ -19,11 +19,14 @@ function Auth(Component){
     }
     componentDidMount(){
       if(!getStorage("TOKEN")){
-        this.props.history.push('/admin/login')
+        // 不起作用？why
+        const url = encodeURIComponent(window.location.href)
+        this.props.history.replace('/admin/login?redirect=' + url)
         return;
       }
-      const userInfo = store.getState().user.userInfo;
-      if(!userInfo){
+      const userName = store.getState().user.userInfo.userName;
+      
+      if(!userName){
         store.dispatch(actionGetUserInfo())
       }
     }

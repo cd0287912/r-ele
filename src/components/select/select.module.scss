@@ -1,0 +1,109 @@
+@import "./../../style/mixin.scss";
+div.select {
+  position: relative;
+}
+div.select > input[type='text']{
+  width: 100%;
+  height: 100%;
+  border: none;
+  line-height: 24px;
+  height: 40px;
+  border-radius: 8px;
+  padding: 0 40px 0 10px;
+  background-color: #f3f3f4;
+  outline: none;
+  cursor: pointer;
+}
+div.select input:hover{
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(234,76,137,0.1)
+}
+div.select input:focus{
+  box-shadow: 0 0 0 4px rgba(234,76,137,0.1)
+}
+div.select input:focus + .icon-container i{
+  transform: rotate(180deg);
+}
+div.select input:focus + .icon-container + div.drop-list-container{
+  display: block;
+  transition: all .3s linear;
+}
+
+.icon-container{
+  pointer-events: none;
+  position: absolute;
+  height: 100%;
+  right: 0;
+  top: 0;
+  width: 40px;
+  text-align: center;
+  i{
+    transition: all .26s linear;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 40px;
+  }
+}
+div.drop-list-container{
+  display: none;
+  border: 1px solid #e4e7ed;
+  z-index: 999;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 12px);
+  width: 100%;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+  padding: 6px 0;
+}
+ul.drop-down-main{
+  max-height: 200px;
+  overflow-y: auto;
+  @include scrollBar;
+  li{
+    padding: 0 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #606266;
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  li:hover{
+    background-color: #f5f7fa
+  }
+}
+
+
+.arrow{
+  position: absolute;
+  left: 35px;
+  top: -6px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 6px;
+  filter: drop-shadow(0 2px 12px rgba(0,0,0,.03));
+  margin-right: 3px;
+  border-top-width: 0;
+  border-bottom-color: #ebeef5;
+  &::after{
+    content:'';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 6px;
+    top: 1px;
+    margin-left: -6px;
+    border-top-width: 0;
+    border-bottom-color: #fff;
+  }
+}

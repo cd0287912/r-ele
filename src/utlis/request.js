@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {getStorage} from "./../utlis/store"
+import {getStorage,setStorage} from "./../utlis/store"
 const { baseURL } = require('./../config')
 
 const instance = axios.create({
@@ -18,7 +18,20 @@ instance.interceptors.response.use(
   response => {
     return response.data
   },
-  error => {}
+  error => {
+    const status = error.response.status;
+    switch(status){
+      case 403:
+        // 登录失效
+        setStorage("TOKEN", '')
+        window.location.reload()
+        break
+      default:
+        break
+    }
+    console.log(error.response.status);
+    
+  }
 )
 
 export default instance

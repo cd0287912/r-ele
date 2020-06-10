@@ -4,6 +4,7 @@ import login from "./../page/admin/login"
 import Layout from "./../page/admin/layout"
 import Aashboard from "./../page/admin/dashboard"
 import Person from "./../page/admin/person"
+import Pages from "./../page/admin/page"
 import { Redirect } from "react-router-dom"
 const routes = [
   {
@@ -21,14 +22,19 @@ const routes = [
         component: Auth(Aashboard)
       },
       {
-        path:'/admin/person',
-        component: Auth(Person)
+        path:'/admin/pages',
+        exact:true,
+        component: Auth(Pages)
       },
       {
-        path:'*',
-        // eslint-disable-next-line react/react-in-jsx-scope
-        render:() => (<Redirect to="/admin/dashboard"/>)
-      }
+        path:'/admin/person',
+        exact:true,
+        component: Auth(Person)
+      },
+      // {
+      //   path:'*',
+      //   render:() => (<Redirect to="/admin/dashboard"/>)
+      // }
     ]
   }
 ]

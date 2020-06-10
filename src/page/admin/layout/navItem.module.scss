@@ -16,10 +16,11 @@ li.item{
     font-family: coco;
   }
 }
-:global(li.active) {
+:global(li[class^='navItem'].active) {
   background: $main_color;
   color: #fff;
 }
+
 li.item:hover{
   background: $main_color;
   color: #fff;
