@@ -38,29 +38,61 @@ const data = [
     address: 'Sidney No. 1 Lake Park',
     tags: ['cool', 'teacher'],
   },
+  {
+    key: '4',
+    name: 'John Brown',
+    age: 32,
+    address: 'New York No. 1 Lake Park',
+    tags: ['nice', 'developer'],
+  },
+  {
+    key: '5',
+    name: 'Jim Green',
+    age: 42,
+    address: 'London No. 1 Lake Park',
+    tags: ['loser'],
+  },
+  {
+    key: '6',
+    name: 'Joe Black',
+    age: 32,
+    address: 'Sidney No. 1 Lake Park',
+    tags: ['cool', 'teacher'],
+  },
+  {
+    key: '7',
+    name: 'Joe Black',
+    age: 32,
+    address: 'Sidney No. 1 Lake Park',
+    tags: ['cool', 'teacher'],
+  },
 ];
 
 const columns = [
   {
-    title: 'Name',
+    title: '文章标题',
     dataIndex: 'name',
-    key: 'name',
-    render: (text) => <a href>{text}</a>,
+    key: 'name'
   },
   {
-    title: 'Age',
+    title: '作者',
     dataIndex: 'age',
     key: 'age',
+    align:'center',
+    width:100,
   },
   {
-    title: 'Address',
+    title: '简介',
     dataIndex: 'address',
+    align:'center',
     key: 'address',
   },
   {
-    title: 'Tags',
+    title: '标签',
     key: 'tags',
     dataIndex: 'tags',
+    align:'center',
+    width:200,
     render: (tags) => (
       <span>
         {tags.map((tag) => {
@@ -78,12 +110,15 @@ const columns = [
     ),
   },
   {
-    title: 'Action',
+    title: '操作',
     key: 'action',
+    align:'center',
+    width:300,
     render: (text, record) => (
       <span>
-        <a href style={{ marginRight: 16 }}>Invite {record.name}</a>
-        <a href>Delete</a>
+        <Button type='primary'>预览</Button>
+        <Button type='primary'>编辑</Button>
+        <Button>删除</Button>
       </span>
     ),
   },
@@ -134,7 +169,7 @@ function Page(){
           <div className={styled.main}>
             <Table
             columns={columns}
-            pagination={{ position: ['bottomCenter'] }}
+            pagination={{ hideOnSinglePage:true,showQuickJumper:true,position: ['bottomCenter'] ,pageSize:6}}
             dataSource={data}
           />
           </div>

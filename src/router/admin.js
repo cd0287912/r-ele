@@ -5,6 +5,7 @@ import Layout from "./../page/admin/layout"
 import Aashboard from "./../page/admin/dashboard"
 import Person from "./../page/admin/person"
 import Pages from "./../page/admin/page"
+import Publish from "./../page/admin/publish" 
 // import { Redirect } from "react-router-dom"
 const routes = [
   {
@@ -25,6 +26,11 @@ const routes = [
         path:'/admin/pages',
         exact:true,
         component: Auth(Pages)
+      },
+      {
+        path:'/admin/publish',
+        exact:true,
+        component: Auth(Publish)
       },
       {
         path:'/admin/person',
