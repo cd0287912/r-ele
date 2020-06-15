@@ -60,7 +60,9 @@ function Safe(){
         onCancel = {handleCancel}
       >
         <Input ref = { oldPassword } type = "password" label = "原密码" />
-        <Input ref = { new1Password } type = "password" label = "新密码" />
+        <div style={{margin:"10px 0"}}>
+          <Input ref = { new1Password } type = "password" label = "新密码" />
+        </div>
         <Input ref = { new2Password } type = "password" label = "新密码" />
       </Modal>
     </div>

@@ -16,13 +16,14 @@ div.notice{
     background-color: #e6f7ff;
     h2{color: #909399;}
   }
+  h2{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #fff;
+  }
 }
-h2{
-  margin: 0 auto;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  color: #fff;
-}
+
 

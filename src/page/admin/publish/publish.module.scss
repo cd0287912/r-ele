@@ -3,6 +3,35 @@
   padding: 24px;
 }
 
-.editor-container{
-  
+.title-container{
+  width: 50%;
+  margin-bottom: 20px;
+  :global{
+    label {
+      font-weight: bold;
+      font-size: 16px;
+    }
+    label input{
+      width: 80%;
+      margin-left: 10px;
+    }
+  }
+}
+.type-container{
+  width: 50%;
+  margin-bottom: 20px;
+  label{
+    font-weight: bold;
+    font-size: 18px;
+  }
+  :global{
+    div[class^="select_se"]{
+      display: inline-block;
+      width: 80%;
+      margin-left: 10px;
+      input{
+        font-size: 16px;
+      }
+    }
+  }
 }

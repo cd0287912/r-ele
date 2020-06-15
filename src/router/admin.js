@@ -6,6 +6,7 @@ import Aashboard from "./../page/admin/dashboard"
 import Person from "./../page/admin/person"
 import Pages from "./../page/admin/page"
 import Publish from "./../page/admin/publish" 
+import Classify from "./../page/admin/classify" 
 // import { Redirect } from "react-router-dom"
 const routes = [
   {
@@ -31,6 +32,11 @@ const routes = [
         path:'/admin/publish',
         exact:true,
         component: Auth(Publish)
+      },
+      {
+        path:'/admin/classify',
+        exact:true,
+        component: Auth(Classify)
       },
       {
         path:'/admin/person',
