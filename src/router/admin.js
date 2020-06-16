@@ -1,4 +1,5 @@
-// import React from "react"
+import React from "react"
+import { Redirect } from "react-router-dom"
 import Auth from "./../components/auth"
 import login from "./../page/admin/login"
 import Layout from "./../page/admin/layout"
@@ -7,7 +8,7 @@ import Person from "./../page/admin/person"
 import Pages from "./../page/admin/page"
 import Publish from "./../page/admin/publish" 
 import Classify from "./../page/admin/classify" 
-// import { Redirect } from "react-router-dom"
+// 
 const routes = [
   {
     path:'/admin/login',
@@ -18,6 +19,11 @@ const routes = [
     path:'/admin',
     component: Layout,
     routes:[
+      {
+        path:'/admin',
+        exact:true,
+        component: Auth(Aashboard)
+      },
       {
         path:'/admin/dashboard',
         exact:true,
@@ -43,10 +49,10 @@ const routes = [
         exact:true,
         component: Auth(Person)
       },
-      // {
-      //   path:'*',
-      //   render:() => (<Redirect to="/admin/dashboard"/>)
-      // }
+      {
+        path:'*',
+        render:() => (<Redirect to="/404"/>)
+      }
     ]
   }
 ]

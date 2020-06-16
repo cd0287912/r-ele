@@ -1,27 +1,14 @@
 import React from 'react'
-// import { Card } from 'antd';
-import svg from "./../../../../../assets/image/pi-layouts.svg"
 import styled from './index.module.scss'
 function Panel(props){
+  const {url,label,title} = props.item
   return (
     <div className={styled.panel}>
-      <img src={svg} alt=""/>
-      <h3>Multiple Layouts</h3>
-      <p>Select your own layout for a better browsing experience</p>
+      <img src={url} alt=""/>
+      <h3>{title}</h3>
+      <p>{label}</p>
     </div>
   )
 }
 
 export default Panel
-
-/* 
-
-    <Card
-      hoverable
-      bordered={false}
-      >
-      <img src={svg} alt=""/>
-      <div>21</div>
-    </Card>
-
-*/

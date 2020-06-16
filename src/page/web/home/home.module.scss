@@ -1,5 +1,8 @@
 .home{
   overflow: hidden;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .banner{
   width: 90%;
@@ -13,5 +16,6 @@
 
 .lists{
   width: 80%;
-  margin:  0 auto;
+  margin:  60px auto;
+  flex: 1;
 }

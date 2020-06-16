@@ -1,18 +1,21 @@
-@import './../../style//varable.scss';
+@import './../../../../style/varable.scss';
 .head{
   width: 100%;
   box-shadow: $show;
   background: #fff;
-  padding: 0 20px;
+  padding: 0 40px;
   position: fixed;
+  z-index: 99;
   top: 0;
   left: 0;
+  transition: all .3s;
 }
 
 .logo-container{
   line-height: 80px;
   img{
-    width: 60px;
+    display: inline-block;
+    width: 58px;
     vertical-align: middle;
   }
   h1{
@@ -60,5 +63,11 @@
 @media (max-width: 576px){
   .logo-container{
     text-align: center;
+  }
+}
+:global{
+  .scrolled{
+    transform: translateY(-100%);
+    box-shadow: none;
   }
 }
