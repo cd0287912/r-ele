@@ -2,7 +2,7 @@ import React from 'react'
 import { renderRoutes } from "react-router-config"
 import WebHead from "./../components/head"
 const style = {
-  paddingTop: "80px"
+  paddingTop: "60px"
 }
 function WebLayout({route}){
   return (

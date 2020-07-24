@@ -4,6 +4,7 @@ import adminRouters from "./admin"
 import WebLayout from "./../page/web/layout"
 import Home from "./../page/web/home"
 import Guide from "./../page/web/guide"
+import Readme from "./../page/web/readme"
 import NotFound from "./../page/404"
 
 const routes = [
@@ -28,9 +29,14 @@ const routes = [
         component: Home
       },
       {
-        path: '/guide',
+        path: '/page',
         exact: true,
         component: Guide
+      },
+      {
+        path: '/readme',
+        exact: true,
+        component: Readme
       },
       {
         path:'*',
@@ -38,6 +44,6 @@ const routes = [
       }
     ]
   }
-]
+];
 
 export default routes

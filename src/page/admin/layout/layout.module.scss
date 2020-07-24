@@ -7,7 +7,6 @@
   width: 200px;
   position: relative;
   box-shadow: 1px 0 3px rgba(0,21,41,.1);
-  // box-shadow: 2px 0 6px rgba(0,21,41,.35);
   z-index: 1;
   .logo{
     height: 70px;
@@ -20,7 +19,6 @@
   flex: 1;
   header{
     height: 70px;
-    box-shadow: $show;
     box-shadow: 0 1px 4px rgba(0,21,41,.08);
     z-index: 9;
     position: relative;
@@ -38,9 +36,9 @@
     }
   }
   main{
-    height: calc(100% - 70px);
+    //height: calc(100% - 70px);
     background: #F2F6FC;
-    overflow: auto;
+    //overflow: auto;
   }
 }
 

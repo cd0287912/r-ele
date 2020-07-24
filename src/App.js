@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import routes from "./router"
 function App() {
 	return (
-		<Provider  store = {store}>
+		<Provider store = {store}>
 			<BrowserRouter>{renderRoutes(routes)}</BrowserRouter>
 		</Provider>
 	);

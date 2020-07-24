@@ -7,4 +7,16 @@
   padding: 20px;
   height: 100%;
   border-radius: 4px;
+  .content{
+    margin-top: 20px;
+    i{font-size: 16px;margin-right: 4px}
+  }
+  .main{
+    margin-top: 20px;
+  }
+}
+
+.pagination{
+  text-align: center;
+  margin-top: 30px;
 }

@@ -1,20 +1,27 @@
 import React from 'react'
-import { connect } from "react-redux"
+import {connect} from "react-redux"
 import styled from "./layout.module.scss"
 import logo from "./../../../assets/image/panda.svg"
-import { Avatar,Tooltip } from 'antd';
+import {Avatar, Tooltip} from 'antd';
+import {useLocation, useHistory} from 'react-router-dom'
 import {renderRoutes} from 'react-router-config'
 import {removeStorage} from "./../../../utlis/store"
 import Nav from "./nav"
-const {baseURL} = require('./../../../config')
+const {baseURL} = require('./../../../config');
 
-function Layout(porps){
-  const {route,userInfo} = porps
+function Layout(porps) {
+  const {route, userInfo} = porps;
+  let location = useLocation();
+  let history = useHistory();
+  if (location.pathname === "/admin") {
+    history.replace('/admin/pages')
+  }
+
   // 退出登录
   const handleExit = () => {
-    removeStorage("TOKEN")
+    removeStorage("TOKEN");
     window.location.reload()
-  }
+  };
   return (
     <div className={styled.layout}>
       <div className={styled.nav}>
@@ -26,7 +33,8 @@ function Layout(porps){
       <div className={styled.container}>
         <header>
           {
-            userInfo.avatar ? (<Avatar size={40} src={baseURL + userInfo.avatar} />):null
+            userInfo.avatar ? (
+              <Avatar size={40} src={baseURL + userInfo.avatar}/>) : null
           }
           <Tooltip color={'#606266'} placement="topLeft" title='退出'>
             <i onClick={handleExit} className="iconfont icon-guanji"></i>
@@ -43,11 +51,10 @@ function Layout(porps){
 }
 
 
-const mapStateToProps =  state => ({
+const mapStateToProps = state => ({
   userInfo: state.user.userInfo
 })
 
-const mapDispatchToPorps = dispatch => ({
-})
+const mapDispatchToPorps = dispatch => ({})
 
 export default connect(mapStateToProps, mapDispatchToPorps)(Layout)

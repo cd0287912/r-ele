@@ -1,12 +1,12 @@
 .home{
   overflow: hidden;
-  min-height: 100%;
+  min-height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
 }
 .banner{
   width: 90%;
-  margin:  30px auto;
+  margin:  20px auto 0;
   max-width: 800px;
   img{
     width: 100%;
@@ -16,6 +16,12 @@
 
 .lists{
   width: 80%;
-  margin:  60px auto;
+  margin:  80px auto 0;
   flex: 1;
+}
+
+@media screen and (max-width: 720px){
+  .lists {
+    margin:  10px auto 0;
+  }
 }

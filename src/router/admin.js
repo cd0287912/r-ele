@@ -6,9 +6,9 @@ import Layout from "./../page/admin/layout"
 import Aashboard from "./../page/admin/dashboard"
 import Person from "./../page/admin/person"
 import Pages from "./../page/admin/page"
-import Publish from "./../page/admin/publish" 
-import Classify from "./../page/admin/classify" 
-// 
+import Publish from "./../page/admin/publish"
+import Classify from "./../page/admin/classify"
+
 const routes = [
   {
     path:'/admin/login',
@@ -22,13 +22,13 @@ const routes = [
       {
         path:'/admin',
         exact:true,
-        component: Auth(Aashboard)
+        component: Auth(Pages)
       },
-      {
-        path:'/admin/dashboard',
-        exact:true,
-        component: Auth(Aashboard)
-      },
+      // {
+      //   path:'/admin/dashboard',
+      //   exact:true,
+      //   component: Auth(Aashboard)
+      // },
       {
         path:'/admin/pages',
         exact:true,
@@ -55,6 +55,6 @@ const routes = [
       }
     ]
   }
-]
+];
 
 export default routes

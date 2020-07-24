@@ -1,5 +1,6 @@
 @import './../../../../style/varable.scss';
-.head{
+
+.head {
   width: 100%;
   box-shadow: $show;
   background: #fff;
@@ -11,14 +12,16 @@
   transition: all .3s;
 }
 
-.logo-container{
-  line-height: 80px;
-  img{
+.logo-container {
+  line-height: 60px;
+
+  img {
     display: inline-block;
     width: 58px;
     vertical-align: middle;
   }
-  h1{
+
+  h1 {
     display: inline-block;
     vertical-align: middle;
     font-family: coco;
@@ -28,19 +31,21 @@
   }
 }
 
-.nav{
+.nav {
   text-align: right;
-  line-height: 80px;
-  li{
+  line-height: 60px;
+
+  li {
     position: relative;
     display: inline-block;
     color: $main_color;
     line-height: 2;
     font-size: 16px;
-    margin-left: 40px;
+    margin-left: 20px;
     cursor: pointer;
   }
-  li::after{
+
+  li::after {
     content: '';
     position: absolute;
     left: 0;
@@ -49,25 +54,62 @@
     width: 0;
     background-color: $em_color;
   }
-  li:hover::after{
+
+  li:hover::after {
     transition: all .1s linear;
     width: 100%;
   }
-  :global{
-    li.active::after{
+
+  :global {
+    li.active::after {
       width: 100%;
     }
   }
 }
 
-@media (max-width: 576px){
-  .logo-container{
+.nav-icon-container {
+  position: absolute;
+  right: -10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: right;
+}
+
+@media (max-width: 993px) {
+  .logo-container {
     text-align: center;
   }
 }
-:global{
-  .scrolled{
-    transform: translateY(-100%);
-    box-shadow: none;
+
+ul.small-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 60px;
+  box-shadow: $show;
+  //height: 0;
+  //overflow: hidden;
+  transition: all .3s;
+
+  li {
+    line-height: 60px;
+    text-align: center;
+    color: $main_color;
+    font-size: 16px;
+    background: #fff;
+    cursor: pointer;
+  }
+
+  li:hover {
+    background: skyblue;
+    color: #fff;
+  }
+
+  :global {
+    li.active {
+      background: skyblue;
+      color: #fff;
+    }
   }
 }
+

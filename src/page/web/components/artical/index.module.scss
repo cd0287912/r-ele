@@ -1,0 +1,85 @@
+@import "./../../../../style/varable";
+.artical{
+  padding-left: 20px;
+  position: relative;
+  padding-bottom: 60px;
+}
+.time{
+  background: skyblue;
+  border-radius: 2px;
+  line-height: 2;
+  display: inline-block;
+  padding: 0 10px;
+  position: relative;
+  top: -15px;
+  color: #fff;
+  position: relative;
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12)!important;
+}
+.time::before{
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-right-color: skyblue;
+}
+.title{
+  line-height: 1.5;
+  color: $em_color;
+  font-size: 18px;
+  cursor: pointer;
+}
+.title:hover{
+  text-decoration: underline;
+}
+.tags{
+  margin: 20px 0;
+}
+.pic{
+  width: 320px;
+  border-radius: 4px;
+  overflow: hidden;
+  img{
+    width: 100%;
+  }
+}
+.desc{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #999;
+}
+
+.line{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: skyblue;
+}
+.line::before{
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid skyblue;
+  background: #fff;
+}
+.dot{
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}

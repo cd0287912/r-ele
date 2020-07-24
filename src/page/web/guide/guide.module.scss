@@ -1,3 +1,25 @@
 .guide{
-  padding: 60px;
+  padding-top: 40px;
+}
+
+
+.main{
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px 40px 20px;
+  div:last-child{
+    padding-bottom: 0;
+  }
+}
+.pagination-container {
+  text-align: center;
+  padding:20px 0;
+}
+.pagination-container > ul{
+  display: inline-block;
+}
+@media screen and (max-width: 720px){
+  .main {
+    max-width: 480px;
+  }
 }

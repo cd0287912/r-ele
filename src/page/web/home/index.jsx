@@ -3,7 +3,7 @@ import styled from "./home.module.scss"
 import {Row, Col} from "antd"
 import js_gif from './../../../assets/image/js.gif'
 import Footer from './../components/footer'
-import Panel from './component/panel'
+import Panel from './panel'
 const list = [
   {
     id:1,

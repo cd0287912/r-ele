@@ -14,7 +14,7 @@
       return;
 
     if (scrollTop > lastScrollTop && scrollTop > hideOn) {
-      $DOM.classList.add('scrolled');
+      $DOM.classList && $DOM.classList.add('scrolled');
     } else if (scrollTop + window.innerHeight < document.body.scrollHeight) {
       $DOM.classList.remove('scrolled');
     }
